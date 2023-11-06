@@ -34,7 +34,7 @@ num_students = 1500
 hours_spent = np.random.uniform(0, 24, num_students)
 
 # Coefficients for the quadratic equation
-h = 10.5  # Assuming maximum grade is achieved at 12 hours of study.
+h = 11.667  # Assuming maximum grade is achieved at 12 hours of study.
 k = 100  # Assuming the maximum grade is 100.
 
 a = -0.15  # Adjust this value as needed to control the curvature
