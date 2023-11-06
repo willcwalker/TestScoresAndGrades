@@ -30,17 +30,17 @@ def generate_grade(hours, a, b, c, noise_level):
     return grades
 
 # Number of students
-num_students = 1000
+num_students = 1500
 
 # Generate random homework hours (say 0 to 24 hours per week)
 hours_spent = np.random.uniform(0, 24, num_students)
 
 # Coefficients for the quadratic equation
-h = 12  # Assuming maximum grade is achieved at 12 hours of study.
+h = 10.5  # Assuming maximum grade is achieved at 12 hours of study.
 k = 100 # Assuming the maximum grade is 100.
 
-# Make 'a' smaller to reduce the drop-off
-a = -0.25  # Adjust this value as needed to control the curvature
+
+a = -0.15  # Adjust this value as needed to control the curvature
 
 # Recalculate 'b' and 'c' based on the new 'a' value
 b = -2 * a * h  # Derived from the vertex form of a parabola
@@ -108,9 +108,9 @@ plt.xlim(left=0, right=25)
 plt.ylim(bottom=0, top=110)
 
 # Add labels and title with increased font size
-plt.title('Exam Grade vs. Hours of Homework Assigned', fontsize=18)
-plt.xlabel('Hours of Homework Assigned', fontsize=14)
-plt.ylabel('Exam Grade', fontsize=14)
+plt.title('Prediction of Performance as a Function of Weekly Time Spent on Homework', fontsize=18)
+plt.xlabel('Total Weekly Hours Spent on Homework', fontsize=14)
+plt.ylabel('Predicted Exam Grade', fontsize=14)
 
 # Move the legend outside the plot
 plt.legend(loc='upper right', bbox_to_anchor=(1, -.15), shadow=False, ncol=2)
